@@ -1,0 +1,35 @@
+sourceColumns:
+  - name: Order Number
+    pattern: "\\d+"
+  - name: Year
+    pattern: "\\d{4}"
+  - name: Month
+    pattern: "\\d{1,2}"
+  - name: Day
+    pattern: "\\d{1,2}"
+  - name: Product Number
+    pattern: "[-A-Z0-9]+"
+  - name: Product Name
+    pattern: "[A-Za-z\\s]+"
+  - name: Count
+    pattern: "[0-9.,]+"
+
+targetColumns:
+  - name: OrderID
+    type: INT
+    value: "#{Order Number}"
+  - name: OrderDate
+    type: DATE
+    value: "#{Year}-#{Month}-#{Day}"
+  - name: ProductId
+    type: STRING
+    value: "#{Product Name}"
+  - name: ProductName
+    type: STRING_PROPER_CASED
+    value: "#{Product Name}"
+  - name: Quantity
+    type: BIG_DECIMAL
+    value: "#{Count}"
+  - name: Unit
+    type: STRING
+    value: "kg"
