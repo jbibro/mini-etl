@@ -68,3 +68,16 @@ To transform csv file use following code:
         .using(File("example/configuration.yaml"))
         .transform(File("example/orders.csv"))
 ```
+
+## Implementation
+
+### Things I focused on
+- Delivering concise code that fulfills requirements
+- Keeping configuration simple
+
+### Things to improve / Next steps
+- Add error handling and logging
+- Focus on output, now it's simple list of maps, add possibility to transform into java type (e.g. Order.class) or to save output directly to new file
+- Perform stresstests using files with large number of rows
+- Implement more test cases (not only happy case)
+- Improve/Enrich API (add new ways of configuration etc)
