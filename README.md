@@ -81,3 +81,4 @@ To transform csv file use following code:
 - Perform stresstests using files with large number of rows
 - Implement more test cases (not only happy case)
 - Improve/Enrich API (add new ways of configuration etc)
+- Split project into modules (core, example)
